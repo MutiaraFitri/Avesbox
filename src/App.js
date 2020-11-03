@@ -1,25 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import { Button, Row, Col } from 'antd';
+import Cover from './component/Cover'
+import Intro from './component/Intro'
+import Fitur from './component/Fitur'
+import Regis from './component/Regis'
+import Package from './component/Package'
+import News from './component/News'
+import Footer from './component/Footer'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+const App = () => (
+  <div className="App">
+
+    <div className="cover" >
+      <Cover />
     </div>
-  );
-}
+    <div className="content-intro">
+      <Intro />
+    </div>
+    <div className="content-regis">
+      <Regis />
+    </div>
+    <div className="content-fitur">
+      <Fitur />
+    </div>
+    <div className="content-package">
+      <Package />
+    </div>
+    <div className="content-news">
+      <News />
+    </div>
+    <div className="content-footer">
+      <Footer />
+    </div>
+
+  </div>
+);
+
 
 export default App;
