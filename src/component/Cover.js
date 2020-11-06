@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Avatar, Layout, Menu, Icon, Button, Row, Col, Collapse, Input } from 'antd';
 import logo from './../img/logo.png';
 import cover from './../img/cover-img.png';
+import panah from './../img/Vector.png';
 import './../../src/index.css';
 //import { ArrowRightOutlined } from 'antd';
 const { Header, Footer } = Layout;
@@ -20,7 +21,7 @@ export class Cover extends Component {
                     zIndex: 2
                 }}>
                     <div className="logo" style={{ lineHeight: '40px', float: "left", color: "black", fontSize: "30px", marginTop: "30px" }}>
-                        <div style={{ fontSize: "28px", float: "left", marginRight: "20px" }}>
+                        <div style={{ fontSize: "28px", float: "left", marginRight: "10px" }}>
                             <img src={logo} alt="logo" />
                         </div>
                         <div className="tulisan-logo" style={{ width: "600px" }}>
@@ -72,16 +73,8 @@ export class Cover extends Component {
                     <div style={{ position: "absolute", zIndex: "2", top: "250px", width: "100%" }}>
                         <Row>
                             <Col xs={2} sm={4} md={6} lg={8} xl={10}>
-                                <div style={{ float: "right", width: "681px" }}>
-                                    <div style={{
-                                        backgroundImage: 'url(' + cover + ')',
-                                        backgroundRepeat: "no-repeat",
-                                        minHeight: "428px",
-                                        paddingTop: "179px",
-                                        paddingLeft: '62px',
-                                        filter: "drop-shadow(0px 0px 10px rgba(0,0,0,0.2))"
-                                    }}>
-                                    </div>
+                                <div style={{ float: "left", width: "400px", height: "350px", marginLeft: "62px" }}>
+                                    <img src={cover} alt="cover" />
                                 </div>
                             </Col>
                             <Col xs={2} sm={4} md={6} lg={8} xl={12}>
@@ -90,13 +83,14 @@ export class Cover extends Component {
                                     height: "173px",
                                     position: "absolute",
                                     top: "67px",
-                                    marginLeft: "166px"
+                                    marginLeft: "250px"
                                 }}>
                                     <div style={{ fontSize: "64px", fontWeight: 700, lineHeight: "70px" }}>
                                         Mitra Kandang Unggas
                                     </div>
                                     <div style={{ fontSize: "29px", marginTop: "35px", fontWeight: 700, color: "#DB162F" }}>
                                         Pelajari disini
+                                        <img src={panah} alt="panah" style={{ marginLeft: "20px" }} />
                                         { /* <ArrowRightOutlined /> */}
                                     </div>
                                     {/* <Button shape="round" icon="download" size="large" style={{ fontWeight: 700, color: "blue", textTransform: "uppercase", letterSpacing: "3px", fontSize: "14px" }}>
