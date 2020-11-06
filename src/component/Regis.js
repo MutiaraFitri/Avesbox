@@ -8,12 +8,12 @@ const { Content } = Layout;
 export class Regis extends Component {
     render() {
         return (
-            <Layout className="layout" style={{ padding: '100px 0px' }}>
+            <Layout className="layout" style={{fontFamily:"montserrat", padding: '150px 0px' }}>
                 <Content style={{ padding: '0 50px' }}>
                     <Row>
                         <Col span={14}>
-                            <div style={{fontWeight:"bold",fontSize:"30px"}}>Selamat Datang.</div>
-                            <div style={{fontWeight:"bold",fontSize:"55px",lineHeight:"1.1"}}>Mau bikin bisnis <br/> ternak unggas lebih menguntungkan ?</div>
+                            <div style={{fontWeight:"bold",fontSize:"30px",marginBottom:"10px"}}>Selamat Datang.</div>
+                            <div style={{fontWeight:"bold",fontSize:"55px",lineHeight:"1.2"}}>Mau bikin bisnis <br/> ternak unggas lebih menguntungkan ?</div>
                             <Button shape="round" style={{fontSize:"24px",marginTop:"30px",backgroundColor:"#DB162F",color:"#fff",height:"auto",fontWeight:"500",padding:"5px 40px"}}>
                                 Yuk, daftarkan kandang anda!
                             </Button>

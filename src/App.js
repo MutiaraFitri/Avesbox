@@ -1,4 +1,3 @@
-import { Button, Row, Col } from 'antd';
 import Cover from './component/Cover'
 import Intro from './component/Intro'
 import Fitur from './component/Fitur'
@@ -6,7 +5,6 @@ import Regis from './component/Regis'
 import Package from './component/Package'
 import News from './component/News'
 import Footer from './component/Footer'
-
 
 const App = () => (
   <div className="App">

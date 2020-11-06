@@ -23,7 +23,7 @@ export class Fitur extends Component {
             }
         ];
         return (
-            <Layout className="layout" style={{ padding: '100px 0px' }}>
+            <Layout className="layout" style={{fontFamily:"montserrat", padding: '120px 0px',backgroundColor:"#FDFDF4" }}>
                 <Content style={{ padding: '0 50px' }}>
                     <Row>
                         <Col span={14}>
@@ -40,7 +40,7 @@ export class Fitur extends Component {
                                     <div style={{ fontSize: "18px" }}>Internet of Things peternakan unggas</div>
                                 </Col>
                             </Row>
-                            <div style={{paddingLeft:"30px",paddingRight:"150px",fontSize:"24px",textAlign:"justify",marginTop:"30px"}}>
+                            <div style={{paddingLeft:"30px",paddingRight:"150px",fontSize:"24px",textAlign:"justify",marginTop:"50px"}}>
                                 Solusi teknologi dengan memanfaatkan peralatan
                                 instrumentasi yang mampu terhubung dengan Avesbox Cloud untuk  memantau lingkungan
                                 dan mengendalikan peralatan kandang.

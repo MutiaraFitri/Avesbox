@@ -10,7 +10,7 @@ const { Search } = Input;
 export class Intro extends Component {
     render() {
         return (
-            <div tyle={{ backgroundColor: "#fff" }}>
+            <div tyle={{ fontFamily:"montserrat",backgroundColor: "#fff" }}>
                 <div className="isi" style={{ fontSize: "50px", background: "#F4EFEF", height: 800, backgroundSize: "cover" }}>
                     <div style={{ width: "100%" }}>
                         <Row>
@@ -24,7 +24,7 @@ export class Intro extends Component {
 
                                     textAlign: "center",
                                     margin: "0px auto",
-                                    marginTop: "250px",
+                                    marginTop: "250px",fontFamily:"montserrat",
                                     float: "none", zIndex: "3",
                                     width: "70%"
                                 }}>
