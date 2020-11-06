@@ -42,7 +42,7 @@ export class Cover extends Component {
                             lineHeight: '74px',
                             backgroundColor: "rgba(192,192,192,0.0)",
                             float: "right",
-                            marginTop: "30px"
+                            marginTop: "30px",
 
                         }}
                     >
@@ -70,7 +70,7 @@ export class Cover extends Component {
                 <div className="isi" style={{ fontSize: "50px", background: "linear-gradient(180deg, #F7DD5B 0%, #F1B347 114.44%)", height: 800, backgroundSize: "cover" }}>
                     <div style={{ width: "100%", height: "100%", }}>
                     </div>
-                    <div style={{ position: "absolute", zIndex: "2", top: "180px", width: "100%" }}>
+                    <div style={{ position: "absolute", zIndex: "2", top: "200px", width: "100%" }}>
                         <Row>
                             <Col xs={2} sm={4} md={6} lg={8} xl={10}>
                                 <div style={{ float: "left", width: "400px", height: "350px", marginLeft: "62px", }}>
