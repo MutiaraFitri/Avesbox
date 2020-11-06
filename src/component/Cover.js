@@ -70,20 +70,20 @@ export class Cover extends Component {
                 <div className="isi" style={{ fontSize: "50px", background: "linear-gradient(180deg, #F7DD5B 0%, #F1B347 114.44%)", height: 800, backgroundSize: "cover" }}>
                     <div style={{ width: "100%", height: "100%", }}>
                     </div>
-                    <div style={{ position: "absolute", zIndex: "2", top: "250px", width: "100%" }}>
+                    <div style={{ position: "absolute", zIndex: "2", top: "180px", width: "100%" }}>
                         <Row>
                             <Col xs={2} sm={4} md={6} lg={8} xl={10}>
-                                <div style={{ float: "left", width: "400px", height: "350px", marginLeft: "62px" }}>
+                                <div style={{ float: "left", width: "400px", height: "350px", marginLeft: "62px", }}>
                                     <img src={cover} alt="cover" />
                                 </div>
                             </Col>
                             <Col xs={2} sm={4} md={6} lg={8} xl={12}>
                                 <div style={{
-                                    width: "542px",
+                                    width: "500px",
                                     height: "173px",
                                     position: "absolute",
                                     top: "67px",
-                                    marginLeft: "250px"
+                                    marginLeft: "250px",
                                 }}>
                                     <div style={{ fontSize: "64px", fontWeight: 700, lineHeight: "70px" }}>
                                         Mitra Kandang Unggas
