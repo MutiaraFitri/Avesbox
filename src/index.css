@@ -12,3 +12,39 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.wrapper {
+  padding:0 50px;
+}
+.image-regis img{
+  border-radius: 30px;
+}
+
+.layout.regis-layout{
+  padding:150px 0px;
+}
+.layout.fitur-layout{
+  padding:120px 0px;
+}
+
+@media only screen and (max-width: 600px) {
+  .layout.regis-layout{
+    padding:0px;
+  }
+  .layout.fitur-layout{
+    padding:50px 0px;
+  }
+
+  .image-regis{
+    overflow: hidden;
+    height: 440px;
+  }
+  .image-regis img{
+    width:200vw;
+    transform: translateX(-25%);
+    border-radius: 0px;
+  }
+  .wrapper {
+    padding:0px;
+  } 
+}
