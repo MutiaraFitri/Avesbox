@@ -24,7 +24,7 @@ export class Fitur extends Component {
         ];
         return (
             <Layout className="layout fitur-layout" style={{fontFamily:"montserrat",backgroundColor:"#FDFDF4" }}>
-                <Content style={{ padding: '0 50px' }}>
+                <Content style={{ padding: '0 90px' }}>
                     <Row>
                         <Col xs={24} md={14}>
                             <Row>
