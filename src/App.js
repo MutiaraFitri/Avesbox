@@ -1,37 +1,22 @@
-import Cover from './component/Cover'
-import Intro from './component/Intro'
-import Fitur from './component/Fitur'
-import Regis from './component/Regis'
-import Package from './component/Package'
-import News from './component/News'
-import Footer from './component/Footer'
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import AboutPage from './page/AboutPage';
+import ContactPage from './page/ContactPage';
+import LandingPage from "./page/LandingPage";
+import NewsPage from "./page/NewsPage";
+import ProductPage from './page/ProductPage';
+import RegisterPage from './page/RegisterPage';
 
 const App = () => (
-  <div className="App">
-
-    <div className="cover" >
-      <Cover />
-    </div>
-    <div className="content-intro">
-      <Intro />
-    </div>
-    <div className="content-regis">
-      <Regis />
-    </div>
-    <div className="content-fitur">
-      <Fitur />
-    </div>
-    <div className="content-package">
-      <Package />
-    </div>
-    <div className="content-news">
-      <News />
-    </div>
-    <div className="content-footer">
-      <Footer />
-    </div>
-
-  </div>
+  <BrowserRouter>
+    <Switch>
+      <Route exact path="/about" component={AboutPage} />
+      <Route exact path="/contact" component={ContactPage} />
+      <Route exact path="/news" component={NewsPage} />
+      <Route exact path="/product" component={ProductPage} />
+      <Route exact path="/register" component={RegisterPage} />
+      <Route path="/" component={LandingPage} />
+    </Switch>
+  </BrowserRouter>
 );
 
 

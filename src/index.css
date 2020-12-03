@@ -1,62 +1,128 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;1,600&display=swap');
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
 .wrapper {
-  padding:0 90px;
+  padding: 0 90px;
 }
-.image-regis img{
+
+.image-regis img {
   border-radius: 30px;
 }
 
-.layout.regis-layout{
-  padding:150px 0px;
+.layout.regis-layout {
+  padding: 150px 0px;
 }
-.layout.fitur-layout{
-  padding:120px 0px;
+
+.layout.fitur-layout {
+  padding: 120px 0px;
 }
+
 .layout-footer {
   padding: 0 90px;
 }
+
 a.link-footer {
-  color:#fff;
+  color: #fff;
 }
 
 a.link-footer:hover {
-  color:rgb(255, 191, 0);
+  color: rgb(255, 191, 0);
 }
+
+.layout-cover {
+  padding: 0px;
+}
+
+.heightCover {
+  background: linear-gradient(180deg, #F7DD5B 0%, #F1B347 114.44%);
+  height: 100vh;
+}
+
+.fontHeader {
+  float: left;
+  font-size: 39px;
+  font-weight: 800;
+  margin: 0px;
+}
+
+.fontHeader2 {
+  float: left;
+  font-size: 22px;
+  line-height: normal;
+  font-weight: normal;
+}
+
+.isi {
+  font-size: 50px;
+  margin-top: 90px;
+  background-size: cover;
+  padding: 0px 80px;
+}
+
+.imgCover {
+  width: 90%;
+}
+
 @media only screen and (max-width: 600px) {
-  .layout.regis-layout{
-    padding:0px;
+  .layout.regis-layout {
+    padding: 0px;
   }
   .layout-footer {
     padding: 0 30px;
   }
-  .layout.fitur-layout{
-    padding:50px 0px;
+  .layout.fitur-layout {
+    padding: 50px 0px;
   }
-
-  .image-regis{
+  .layout-cover {
+    padding: 0px;
+  }
+  .heightCover {
+    height: auto;
+  }
+  .image-regis {
     overflow: hidden;
     height: 70vh;
   }
-  .image-regis img{
-    width:210vw;
+  .image-regis img {
+    width: 210vw;
     transform: translateX(-25%);
     border-radius: 0px;
   }
   .wrapper {
-    padding:0px;
-  } 
+    padding: 0px;
+  }
+  .fontHeader {
+    padding-left: 20px;
+  }
+  .fontHeader1 {
+    float: left;
+    font-size: 20px;
+    font-weight: 800;
+  }
+  .fontHeader2 {
+    float: left;
+    font-size: 14px;
+    line-height: normal;
+    font-weight: normal;
+  }
+  .isi {
+    padding: 0px;
+  }
+  .imgCover {
+    width: 200vw;
+    transform: translateX(-25%);
+    border-radius: 0px;
+  }
+  header.ant-layout-header {
+    padding: 0px;
+  }
 }

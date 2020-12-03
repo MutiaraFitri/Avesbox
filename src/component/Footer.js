@@ -69,7 +69,7 @@ export class Footer extends Component {
                     </Row>
                     <Row>
                         <Col span={24} style={{ textAlign: "center",marginTop:"40px" }}>
-                            Copyright @ Avesbox 2020-2021
+                            Copyright © Avesbox 2020-2021
                         </Col>
                     </Row>
                 </Content>
