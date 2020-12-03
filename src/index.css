@@ -71,6 +71,36 @@ a.link-footer:hover {
 .imgCover {
   width: 90%;
 }
+.ant-btn-primary {
+  background-color: #DB162F !important;;
+}
+.pagination{
+  width:360px;
+  margin:0px auto;
+  margin-top: 30px;
+  background-color: #fff;
+  border-radius: 10px;
+  padding:5px 0px;
+  box-shadow: 0px 13px 15px -15px ;
+}
+.btn-pagination.active {
+  background-color:#F2C03A;
+  border-radius: 50%;
+  font-weight: 700;
+}
+.btn-pagination:hover {
+  background-color:#F2C03A;
+  border-radius: 50%;
+}
+.btn-pagination {
+  width: 50px;
+  height: 50px;
+  margin:5px;
+  font-size: 18px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
 
 @media only screen and (max-width: 600px) {
   .layout.regis-layout {
