@@ -26,20 +26,20 @@ export class Package extends Component {
     ];
     return (
       <Layout
-        className="layout"
         style={{
           fontFamily: "montserrat",
-          padding: "20px 20px",
+          padding: "70px 20px",
           background: "linear-gradient(180deg, #F7DD5B 0%, #F1B347 114.44%)",
         }}
       >
-        <Content style={{ padding: "0 50px" }}>
-          <h2 style={{ textAlign: "center", marginBottom: 50 }}>
+        <Content 
+        className="layout-footer">
+          <h2 style={{ textAlign: "center", marginBottom: 50, fontWeight:700, letterSpacing:2,fontSize:"24px" }}>
             PAKET LAYANAN
           </h2>
           <Row gutter={64}>
             {data.map((x) => (
-              <Col span={8}>
+              <Col xs={24} md={8} style={{marginTop:"50px"}}>
                 <div
                   style={{ background: "white", borderRadius: 10, padding: 10 }}
                 >
@@ -51,13 +51,13 @@ export class Package extends Component {
                       padding: 15,
                       borderRadius: 10,
                       textAlign: "center",
+                      fontWeight:700,
+                      letterSpacing:2
                     }}
                   >
                     {x.title}
                   </div>
-                  <img
-                    width={260}
-                    height={140}
+                  <Image
                     style={{
                       objectFit: "cover",
                       margin: "20px auto",
