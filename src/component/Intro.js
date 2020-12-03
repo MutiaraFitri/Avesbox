@@ -15,7 +15,7 @@ export class Intro extends Component {
             <Layout className="layout" style={{ fontFamily: "montserrat", backgroundColor: "#edebe5" }}>
                 <Content >
                     <Row>
-                        <Col span={24}>
+                        <Col xs={0} md={24}>
                             <div style={{ float: "left", zIndex: "1", }}>
                                 <img src={ayam} alt="cover" style={{ bottom: "0px", position: "absolute", width: "400px " }} />
                             </div>
