@@ -26,10 +26,22 @@ code {
 .layout.fitur-layout{
   padding:120px 0px;
 }
+.layout-footer {
+  padding: 0 90px;
+}
+a.link-footer {
+  color:#fff;
+}
 
+a.link-footer:hover {
+  color:rgb(255, 191, 0);
+}
 @media only screen and (max-width: 600px) {
   .layout.regis-layout{
     padding:0px;
+  }
+  .layout-footer {
+    padding: 0 30px;
   }
   .layout.fitur-layout{
     padding:50px 0px;
@@ -37,10 +49,10 @@ code {
 
   .image-regis{
     overflow: hidden;
-    height: 440px;
+    height: 70vh;
   }
   .image-regis img{
-    width:200vw;
+    width:210vw;
     transform: translateX(-25%);
     border-radius: 0px;
   }

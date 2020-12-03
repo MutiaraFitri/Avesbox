@@ -26,10 +26,9 @@ export class Regis extends Component {
                                 className="image-regis"
                             />
                         </Col>
-                        <Col xs={24} md={0} style={{marginTop:"-50px",backgroundColor:"#f0f2f5",height:"50px",borderRadius:"50px 50px 0px 0px"}}>
-
+                        <Col xs={24} md={0} style={{marginTop:"-67px",backgroundColor:"#f0f2f5",height:"65px",borderRadius:"50px 50px 0px 0px"}}>
                         </Col>
-                        <Col xs={24} md={0} style={{padding:"10px 20px 55px 20px"}}>
+                        <Col xs={24} md={0} style={{padding:"0px 20px 55px 20px"}}>
                             <div style={{ fontWeight: "bold", fontSize: "16px", lineHeight: "0.7", marginBottom: "10px" }}>Selamat Datang.</div>
                             <div style={{ fontWeight: "bold", fontSize: "26px", lineHeight: "1.3" }}>Mau bikin bisnis <br /> ternak unggas lebih menguntungkan ?</div>
                             <Button shape="round" style={{ fontSize: "14px", marginTop: "15px", backgroundColor: "#DB162F", color: "#fff", height: "auto", fontWeight: "500", padding: "5px 30px" }}>
