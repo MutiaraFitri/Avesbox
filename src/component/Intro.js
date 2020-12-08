@@ -23,7 +23,7 @@ export class Intro extends Component {
 
                                 textAlign: "center",
                                 margin: "0px auto",
-                                padding: "150px 0",
+                                padding: "200px 0",
                                 fontFamily: "montserrat",
                                 float: "none", zIndex: "3",
                                 width: "70%"

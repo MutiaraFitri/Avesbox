@@ -13,7 +13,10 @@ const App = () => (
       <Route exact path="/contact" component={ContactPage} />
       <Route exact path="/news" component={NewsPage} />
       <Route exact path="/product" component={ProductPage} />
-      <Route exact path="/register" component={RegisterPage} />
+      <Route exact path='/register' component={() => {
+        window.location.href = 'https://dev.avesbox.com';
+        return null;
+      }} />
       <Route path="/" component={LandingPage} />
     </Switch>
   </BrowserRouter>

@@ -49,6 +49,7 @@ a.link-footer:hover {
 
 .fontHeader {
   float: left;
+  color: #000;
   font-size: 39px;
   font-weight: 800;
   margin: 0px;
@@ -56,9 +57,17 @@ a.link-footer:hover {
 
 .fontHeader2 {
   float: left;
+  color: #000;
   font-size: 22px;
   line-height: normal;
   font-weight: normal;
+}
+
+.header-top {
+  background-color: rgba(192, 192, 192, 0.0) !important;
+  height: 80px !important;
+  width: 100% !important;
+  z-index: 2 !important;
 }
 
 .isi {
@@ -71,38 +80,125 @@ a.link-footer:hover {
 .imgCover {
   width: 90%;
 }
+
 .ant-btn-primary {
-  background-color: #DB162F !important;;
+  background-color: #DB162F !important;
 }
-.pagination{
-  width:360px;
-  margin:0px auto;
+
+.arrow {
+  margin-left: 20px;
+}
+
+.pelajari:hover {
+  cursor: pointer;
+}
+
+.pagination {
+  width: 360px;
+  margin: 0px auto;
   margin-top: 30px;
   background-color: #fff;
   border-radius: 10px;
-  padding:5px 0px;
-  box-shadow: 0px 13px 15px -15px ;
+  padding: 5px 0px;
+  box-shadow: 0px 13px 15px -15px;
 }
+
 .btn-pagination.active {
-  background-color:#F2C03A;
+  background-color: #F2C03A;
   border-radius: 50%;
   font-weight: 700;
 }
+
 .btn-pagination:hover {
-  background-color:#F2C03A;
+  background-color: #F2C03A;
   border-radius: 50%;
 }
+
 .btn-pagination {
   width: 50px;
   height: 50px;
-  margin:5px;
+  margin: 5px;
   font-size: 18px;
   border: none;
   background-color: transparent;
   cursor: pointer;
 }
 
+.btn-daftar {
+  display: absolute !important;
+  top: 5px !important;
+  border-radius: 10px !important;
+  height: auto !important;
+  border: 1px solid #DB162F !important;
+  background-color: transparent !important;
+  color: #000 !important;
+  font-weight: bold !important;
+  font-size: 20px !important;
+}
+
+.title-cover {
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 50px;
+  padding: 0px 43px;
+}
+.title-pelajari {
+  font-size: 18px;
+  font-weight: 700;
+  color: #DB162F;
+  padding: 20px 43px;
+}
+.title-description{
+  padding: 0 43px;
+}
 @media only screen and (max-width: 600px) {
+  .title-description{
+    padding: 10px 30px;
+  }
+  .title-pelajari {
+    font-size: 24px;
+    padding: 20px 30px;
+  }
+  .title-cover {
+    padding: 0px 30px;
+    font-size: 32px;
+    line-height: 40px;
+    margin-bottom: 20px;
+  }
+  .btn-daftar {
+    display: absolute !important;
+    top: 5px !important;
+    border-radius: 10px !important;
+    height: auto !important;
+    border: none !important;
+    background-color: transparent !important;
+    color: #000 !important;
+    font-weight: bold !important;
+    font-size: 18px !important;
+  }
+  .ant-menu-dark .ant-menu-sub {
+    background: #fff !important;
+  }
+  .isi {
+    font-size: 24px;
+  }
+  .ant-menu {
+    font-size: 45px !important;
+    color: black !important;
+  }
+  .header-top {
+    background-color: rgba(192, 192, 192, 0.0) !important;
+    height: 40px !important;
+    width: 100% !important;
+    z-index: 2 !important;
+  }
+  .pagination {
+    width: 300px;
+  }
+  .btn-pagination {
+    width: 40px;
+    height: 40px;
+  }
   .layout.regis-layout {
     padding: 0px;
   }
@@ -134,12 +230,20 @@ a.link-footer:hover {
     padding-left: 20px;
   }
   .fontHeader1 {
+    color: #000;
+    float: left;
+    font-size: 20px;
+    font-weight: 800;
+  }
+  .fontHeader1 {
+    color: #000;
     float: left;
     font-size: 20px;
     font-weight: 800;
   }
   .fontHeader2 {
     float: left;
+    color: #000;
     font-size: 14px;
     line-height: normal;
     font-weight: normal;
@@ -148,8 +252,8 @@ a.link-footer:hover {
     padding: 0px;
   }
   .imgCover {
-    width: 200vw;
-    transform: translateX(-25%);
+    width: 150vw;
+    transform: translateX(-17%);
     border-radius: 0px;
   }
   header.ant-layout-header {

@@ -41,14 +41,11 @@ export class AboutPage extends Component {
                                         <div style={{ fontSize: "38px", fontWeight: 700, lineHeight: "50px", padding: "0px 43px" }}>
                                             Mitra Kandang Unggas
                                     </div>
-                                        <div style={{ fontSize: "18px", fontWeight: 700, color: "#DB162F", padding: "20px 43px" }}>
-                                            Pelajari disini
-                                        <img src={panah} alt="panah" style={{ marginLeft: "20px", width: "25px" }} />
-                                            { /* <ArrowRightOutlined /> */}
-                                        </div>
                                         <div style={{ padding: "0px 43px" }}>
                                             <img src={line} alt="line" style={{}} />
-                                            <p style={{ fontSize: "16px", textAlign: "justify", paddingBottom: "40px" }}><span style={{ fontWeight: "bold" }}>Avesbox</span> adalah Layanan Otomasisasi Kandang Unggas yang dapat mengatasi masalah manajemen peternakan dengan menggunakan teknologi Internet of Things.</p>
+                                            <p style={{ fontSize: "16px", textAlign: "justify", paddingBottom: "40px" }}>
+                                            <strong>Avesbox</strong> adalah Layanan Otomasisasi Kandang Unggas Anda. Unggas peliharaan terutama ayam broiler merupakan salah satu spesies ayam yang cukup sensitif dengan lingkungan tempat tinggalnya. Lingkungan kandang ayam perlu dipantau oleh peternak untuk memastikan agar lingkungan kandang tetap stabil dan nyaman bagi ayam sejak awal masuk hingga panen. Suhu, amonia dan kelembaban memiliki peran signifikan terhadap pertumbuhan ayam broiler. Suhu dalam kandang perlu dijaga pada kisaran 23 hingga 35 derajat celcius sesuai dengan usia ayam broiler.
+                                            </p>
                                         </div>
                                     </Col>
                                 </div>

@@ -7,16 +7,11 @@ const { Header, Footer } = Layout;
 export class HeaderComponent extends Component {
     render() {
         return (
-            <Header style={{
-                backgroundColor: "rgba(192,192,192,0.0)",
-                height: "80px",
-                width: "100%",
-                zIndex: 2
-            }}>
+            <Header className="header-top">
                 <Row>
                     <Col xs={22} md={10} style={{ marginTop: "20px" }} >
                         <Row>
-                            <div>
+                            <Link to="/">
                                 <Col xs={4} md={4} style={{ float: "left", marginTop: "10px" }}>
                                     <img src={logo} alt="logo" />
                                 </Col>
@@ -28,7 +23,7 @@ export class HeaderComponent extends Component {
                                         Layanan Otomatisati Kandang Unggas
                                     </div>
                                 </Col>
-                            </div>
+                            </Link>
                         </Row>
                     </Col>
                     <Col xs={2} md={14} >
@@ -48,20 +43,11 @@ export class HeaderComponent extends Component {
                             <Menu.Item key="3"><Link style={{ fontSize: "18px", color: "#000", fontWeight: 700, }} to="/about">Tentang</Link></Menu.Item>
                             <Menu.Item key="4"><Link style={{ fontSize: "18px", color: "#000", fontWeight: 700, }} to="/news">Blog</Link></Menu.Item>
                             <Menu.Item key="5"><Link style={{ fontSize: "18px", color: "#000", fontWeight: 700, }} to="/contact">Kontak</Link></Menu.Item>
-                            <Button size='large'
-                                style={{
-                                    display: "absolute",
-                                    top: "5px",
-                                    borderRadius: "10px",
-                                    height: "auto",
-                                    border: "2px solid #DB162F",
-                                    backgroundColor: "transparent",
-                                    color: "#000",
-                                    fontWeight: "bold",
-                                    fontSize: "20px"
-                                }}>
-                                DAFTAR
-                </Button>
+                            <Link to="/register">
+                                <Button size='large' className="btn-daftar">
+                                    Daftar
+                                </Button>
+                            </Link>
                         </Menu>
                     </Col>
                 </Row>

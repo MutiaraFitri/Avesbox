@@ -22,7 +22,7 @@ export class Cover extends Component {
                 }}>
                     <div className="logo" style={{ lineHeight: '40px', float: "left", color: "black", fontSize: "30px", marginTop: "30px" }}>
                         <div style={{ fontSize: "28px", float: "left", marginRight: "10px" }}>
-                            <img src={logo} alt="logo" />
+                            <img src={logo} alt="Logo Avesbox" />
                         </div>
                         <div className="tulisan-logo" style={{ width: "600px" }}>
                             <div style={{
@@ -74,7 +74,7 @@ export class Cover extends Component {
                         <Row>
                             <Col xs={2} sm={4} md={6} lg={8} xl={10} style={{ backgroundColor: "red" }}>
                                 <div style={{ float: "left", width: "400px", height: "350px", marginLeft: "62px", backgroundColor: "red" }}>
-                                    <img src={cover} alt="cover" />
+                                    <img src={cover} alt="Mitra Kandang Unggas Avesbox" />
                                 </div>
                             </Col>
                             <Col xs={2} sm={4} md={6} lg={8} xl={12}>

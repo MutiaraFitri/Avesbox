@@ -66,7 +66,7 @@ export class NewsPage extends Component {
                             <Card
                                 hoverable
                                 style={{ width: "90%",padding:"30px",margin:"10px auto",borderRadius:"20px" }}
-                                cover={<img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />}
+                                cover={<img alt="Kandang Unggas Otomatis" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />}
                             >
                                 <Meta title="Europe Street beat" description="www.instagram.com" />
                             </Card>
@@ -75,7 +75,7 @@ export class NewsPage extends Component {
                             <Card
                                 hoverable
                                 style={{ width: "90%",padding:"30px",margin:"10px auto",borderRadius:"20px" }}
-                                cover={<img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />}
+                                cover={<img alt="Kandang Unggas Otomatis" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />}
                             >
                                 <Meta title="Europe Street beat" description="www.instagram.com" />
                             </Card>
@@ -84,7 +84,7 @@ export class NewsPage extends Component {
                             <Card
                                 hoverable
                                 style={{ width: "90%",padding:"30px",margin:"10px auto",borderRadius:"20px" }}
-                                cover={<img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />}
+                                cover={<img alt="Kandang Unggas Otomatis" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />}
                             >
                                 <Meta title="Europe Street beat" description="www.instagram.com" />
                             </Card>
@@ -93,7 +93,7 @@ export class NewsPage extends Component {
                             <Card
                                 hoverable
                                 style={{ width: "90%",padding:"30px",margin:"10px auto",borderRadius:"20px" }}
-                                cover={<img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />}
+                                cover={<img alt="Kandang Unggas Otomatis" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />}
                             >
                                 <Meta title="Europe Street beat" description="www.instagram.com" />
                             </Card>
@@ -102,7 +102,7 @@ export class NewsPage extends Component {
                             <Card
                                 hoverable
                                 style={{ width: "90%",padding:"30px",margin:"10px auto",borderRadius:"20px" }}
-                                cover={<img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />}
+                                cover={<img alt="Kandang Unggas Otomatis" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />}
                             >
                                 <Meta title="Europe Street beat" description="www.instagram.com" />
                             </Card>
@@ -111,7 +111,7 @@ export class NewsPage extends Component {
                             <Card
                                 hoverable
                                 style={{ width: "90%",padding:"30px",margin:"10px auto",borderRadius:"20px" }}
-                                cover={<img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />}
+                                cover={<img alt="Kandang Unggas Otomatis" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />}
                             >
                                 <Meta title="Europe Street beat" description="www.instagram.com" />
                             </Card>

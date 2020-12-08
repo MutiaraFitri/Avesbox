@@ -1,14 +1,15 @@
 import React, { Component } from "react";
 import { List, Col, Image, Layout, Row } from "antd";
+import pitik from './../img/pitik.jpeg'
 
 const { Content } = Layout;
 
 export class Package extends Component {
   render() {
     const data = [
-      { title: "PAKET A" },
-      { title: "PAKET B" },
-      { title: "PAKET C" },
+      { title: "PAKET A",gambar:pitik },
+      { title: "PAKET B",gambar:pitik },
+      { title: "PAKET C",gambar:pitik },
     ];
     const dataList = [
         {
@@ -63,8 +64,8 @@ export class Package extends Component {
                       margin: "20px auto",
                       display: "block",
                     }}
-                    alt="gambar"
-                    src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png"
+                    alt="Unggas"
+                    src={x.gambar}
                   />
                   <List
                     itemLayout="horizontal"
