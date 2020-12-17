@@ -30,9 +30,9 @@ export class Cover extends Component {
                                 />
                             </Col>
                             <Col xs={0} md={10} style={{ paddingTop: "50px" }}>
-                                <div style={{ fontSize: "64px", fontWeight: 700, lineHeight: "70px" }}>
+                                <h1 style={{ fontSize: "64px", fontWeight: 700, lineHeight: "70px" }}>
                                     Mitra Kandang Unggas
-                                    </div>
+                                    </h1>
                                 <Link to="/about" className="pelajari" style={{ fontSize: "29px", marginTop: "35px", fontWeight: 700, color: "#DB162F" }}>
                                     Pelajari disini
                                     {<ArrowRightOutlined className="arrow" />}
@@ -44,9 +44,9 @@ export class Cover extends Component {
                                 <Col xs={24} md={0} style={{ marginTop: "2px", backgroundColor: "#f0f2f5", height: "50px", borderRadius: "50px 50px 0px 0px" }}>
                                 </Col>
                                 <Col xs={24} md={0} style={{ clear: "both", backgroundColor: "#f0f2f5", marginTop: "-2px" }}>
-                                    <div className="title-cover">
+                                    <h1 className="title-cover">
                                         Mitra Kandang Unggas
-                                    </div>
+                                    </h1>
                                     <Link to="/about" className="title-pelajari">
                                         Pelajari disini
                                         {<ArrowRightOutlined className="arrow" />}
