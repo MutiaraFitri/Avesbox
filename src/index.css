@@ -113,6 +113,20 @@ a.link-footer:hover {
   background-color: #F2C03A;
   border-radius: 50%;
 }
+.ant-card-body {
+  padding:10px !important;
+}
+
+.ant-card-meta-title {
+  white-space:normal !important;
+  height: 4.5em !important;
+  line-height: 1.5em;
+}
+
+.ant-card-meta-description {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
 
 .btn-pagination {
   width: 50px;

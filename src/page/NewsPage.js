@@ -6,15 +6,28 @@ import line from './../img/Line.png';
 import './../../src/index.css';
 import './../../src/App.css';
 import Footer from '../component/Footer';
-import { LeftOutlined,RightOutlined  } from '@ant-design/icons';
+import { LeftOutlined, RightOutlined } from '@ant-design/icons';
 import HeaderComponent from '../component/HeaderComponent';
+import Axios from 'axios';
 
 const { Meta } = Card;
 const { Search } = Input;
 export class NewsPage extends Component {
+    state = {
+        persons: []
+    }
+
+    componentDidMount() {
+        Axios.get(`http://cms.avesbox.com/news`)
+            .then(res => {
+                const persons = res.data;
+                this.setState({ persons });
+            })
+    }
+
     render() {
         return (
-            <div style={{backgroundColor:"#E5E5E5"}}>
+            <div style={{ backgroundColor: "#E5E5E5" }}>
                 <div className="layout-cover">
                     <div className="heightCover" style={{ height: "auto", paddingBottom: "50px" }}>
                         <HeaderComponent />
@@ -62,60 +75,17 @@ export class NewsPage extends Component {
                 </div >
                 <div className="layout-footer" style={{ paddingTop: "50px", paddingBottom: "50px" }}>
                     <Row>
+                        {this.state.persons.map(news => 
                         <Col md={8}>
                             <Card
                                 hoverable
-                                style={{ width: "90%",padding:"30px",margin:"10px auto",borderRadius:"20px" }}
+                                style={{ width: "90%", padding: "30px", margin: "10px auto", borderRadius: "20px" }}
                                 cover={<img alt="Kandang Unggas Otomatis" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />}
-                            >
-                                <Meta title="Europe Street beat" description="www.instagram.com" />
+                                >
+                                <Meta title={news.judul} description={news.deskripsi} />
                             </Card>
                         </Col>
-                        <Col md={8}>
-                            <Card
-                                hoverable
-                                style={{ width: "90%",padding:"30px",margin:"10px auto",borderRadius:"20px" }}
-                                cover={<img alt="Kandang Unggas Otomatis" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />}
-                            >
-                                <Meta title="Europe Street beat" description="www.instagram.com" />
-                            </Card>
-                        </Col>
-                        <Col md={8}>
-                            <Card
-                                hoverable
-                                style={{ width: "90%",padding:"30px",margin:"10px auto",borderRadius:"20px" }}
-                                cover={<img alt="Kandang Unggas Otomatis" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />}
-                            >
-                                <Meta title="Europe Street beat" description="www.instagram.com" />
-                            </Card>
-                        </Col>
-                        <Col md={8}>
-                            <Card
-                                hoverable
-                                style={{ width: "90%",padding:"30px",margin:"10px auto",borderRadius:"20px" }}
-                                cover={<img alt="Kandang Unggas Otomatis" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />}
-                            >
-                                <Meta title="Europe Street beat" description="www.instagram.com" />
-                            </Card>
-                        </Col>
-                        <Col md={8}>
-                            <Card
-                                hoverable
-                                style={{ width: "90%",padding:"30px",margin:"10px auto",borderRadius:"20px" }}
-                                cover={<img alt="Kandang Unggas Otomatis" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />}
-                            >
-                                <Meta title="Europe Street beat" description="www.instagram.com" />
-                            </Card>
-                        </Col>
-                        <Col md={8}>
-                            <Card
-                                hoverable
-                                style={{ width: "90%",padding:"30px",margin:"10px auto",borderRadius:"20px" }}
-                                cover={<img alt="Kandang Unggas Otomatis" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />}
-                            >
-                                <Meta title="Europe Street beat" description="www.instagram.com" />
-                            </Card>
-                        </Col>
+                        )}
                     </Row>
                     <div className="pagination">
                         <button className="btn-pagination"><LeftOutlined /></button>

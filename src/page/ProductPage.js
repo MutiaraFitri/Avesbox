@@ -1,23 +1,37 @@
 import React, { Component } from 'react'
-import { Layout, Menu, Button, Row, Col, Image } from 'antd';
+import { Layout, Menu, Button, Row, Col, Image, Card } from 'antd';
 import logo from './../img/logo.png';
 import iot from './../img/iot.png';
 import panah from './../img/Vector.png';
 import line from './../img/Line.png';
 import './../../src/index.css';
 import './../../src/App.css';
+import Axios from 'axios';
 import Footer from '../component/Footer';
 import HeaderComponent from '../component/HeaderComponent';
 //import { ArrowRightOutlined } from 'antd';
 const { Header } = Layout;
+const { Meta } = Card;
 
 export class ProductPage extends Component {
+
+    state = {
+        persons: []
+    }
+
+    componentDidMount() {
+        Axios.get(`http://cms.avesbox.com/product`)
+            .then(res => {
+                const persons = res.data;
+                this.setState({ persons });
+            })
+    }
     render() {
         return (
             <div>
                 <div className="layout-cover">
                     <div className="heightCover">
-                        <HeaderComponent/>
+                        <HeaderComponent />
 
                         <div className="isi" >
                             <Row>
@@ -31,7 +45,7 @@ export class ProductPage extends Component {
                                         Product AvesBox
                                     </div>
                                     <div style={{ fontSize: "18px", marginTop: "35px", color: "#000", textAlign: "justify" }}>
-                                    Product dari <strong>Avesbox</strong> adalah IoT, Avesbox mampu memberikan data kepada peternak mengenai kondisi kandang ayam secara up-to-date. Avesbox juga menawarkan aplikasi manajemen kandang berbasis Cloud untuk mengelola data peternakan, mulai dari DOC masuk hingga masa panen. Peternak akan dibantu dalam kegiatan pengelolaan ternak, pakan dan lingkungan. Peternak juga dapat meremote alat yang ada di kandang melalui aplikasi Avesbox yang dapat diakses melalui smartphone maupun komputer dari manapun dan kapanpun.
+                                        Product dari <strong>Avesbox</strong> adalah IoT, Avesbox mampu memberikan data kepada peternak mengenai kondisi kandang ayam secara up-to-date. Avesbox juga menawarkan aplikasi manajemen kandang berbasis Cloud untuk mengelola data peternakan, mulai dari DOC masuk hingga masa panen. Peternak akan dibantu dalam kegiatan pengelolaan ternak, pakan dan lingkungan. Peternak juga dapat meremote alat yang ada di kandang melalui aplikasi Avesbox yang dapat diakses melalui smartphone maupun komputer dari manapun dan kapanpun.
                                 </div>
                                 </Col>
 
@@ -59,7 +73,25 @@ export class ProductPage extends Component {
                         </div>
                     </div >
                 </div >
-                <Footer/>
+                <Row>
+                    {this.state.persons.map(news =>
+                        <Col md={8}>
+                            <Card
+                                hoverable
+                                style={{ width: "90%", padding: "30px", margin: "10px auto", borderRadius: "20px" }}
+                                cover={<img alt="Kandang Unggas Otomatis" src={'http://cms.avesbox.com/assets/'+news.gambar} />}
+                            >
+                                <div className="additional">
+                                    <h2>{news.title}</h2>
+                                    <h4>{news.deskripsi}</h4>
+                                    <p className="price">Harga: {news.harga}</p>
+                                    <p className="price">Stock: {news.stock}</p>
+                                </div>
+                            </Card>
+                        </Col>
+                    )}
+                </Row>
+                <Footer />
             </div>
         )
     }
