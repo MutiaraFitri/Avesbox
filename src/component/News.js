@@ -2,32 +2,25 @@ import { List, Col, Image, Layout, Row, Button } from "antd";
 import React, { Component } from "react";
 import "./../styles/regis.css";
 import logoAves from "./../img/logo-avesbox.png";
+import Axios from 'axios';
 import { Link } from "react-router-dom";
-import kandang1 from "./../img/kandang_1.jpg";
-import kandang2 from "./../img/kandang_2.jpg";
-import kandang3 from "./../img/kandang_3.jpg";
 
 const { Content } = Layout;
 
 export class News extends Component {
+  state = {
+    persons: []
+  }
+
+  componentDidMount() {
+    Axios.get(`http://cms.avesbox.com/news/3`)
+      .then(res => {
+        const persons = res.data;
+        this.setState({ persons });
+      })
+  }
   render() {
-    const data = [
-      {
-        title: "Wow! Tanpa disadari Ternak unggas dapat menghasilkan 5M perbulan",
-        description: "Budi Setiawan seorang peternang handal dapat menghasilkan untung 5M dalam sebulan.",
-        gambar: kandang1,
-      },
-      {
-        title: "Wow! Tanpa disadari Ternak unggas dapat menghasilkan 5M perbulan",
-        description: "Budi Setiawan seorang peternang handal dapat menghasilkan untung 5M dalam sebulan.",
-        gambar: kandang2
-      },
-      {
-        title: "Wow! Tanpa disadari Ternak unggas dapat menghasilkan 5M perbulan",
-        description: "Budi Setiawan seorang peternang handal dapat menghasilkan untung 5M dalam sebulan.",
-        gambar: kandang3
-      },
-    ];
+    const data = this.state.persons;
     return (
       <Layout
         style={{
@@ -36,8 +29,8 @@ export class News extends Component {
           backgroundColor: "#FDFDF4",
         }}
       >
-        <Content 
-        className="layout-footer">
+        <Content
+          className="layout-footer">
           <Row style={{ marginBottom: 30 }}>
             <Col xs={8} md={2}>
               <Image
@@ -61,7 +54,7 @@ export class News extends Component {
           </Row>
 
           <Row gutter={64}>
-            {data.map((x) => (
+            {data? data.map((x) => (
               <Col xs={24} md={8} style={{ marginTop: "40px" }}>
                 <div
                   style={{
@@ -80,16 +73,16 @@ export class News extends Component {
                       display: "block",
                     }}
                     alt="Unggas"
-                    src={x.gambar}
+                    src={'http://cms.avesbox.com/assets/'+x.gambar}
                   />
                   <h2 style={{ fontSize: "16px", fontWeight: 700, textAlign: "left" }}>{x.title}</h2>
-                  <p style={{ fontSize: "16px", textAlign: "left" }}>{x.description}</p>
+                  <p style={{ fontSize: "16px", textAlign: "left" }}>{x.deskripsi}</p>
                 </div>
               </Col>
-            ))}
+            )):null}
           </Row>
         </Content>
-        <Link to="/news" style={{ width:"300px",margin:"0px auto",textAlign: "center" }}>
+        <Link to="/news" style={{ width: "300px", margin: "0px auto", textAlign: "center" }}>
           <Button type="primary" size="large" style={{ padding: "5px 40px", fontSize: "20px", height: "auto", margin: "40px auto", borderRadius: "10px" }}>
             Lihat Berita Lainnya
         </Button>

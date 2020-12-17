@@ -9,12 +9,15 @@ import Footer from '../component/Footer';
 import { LeftOutlined, RightOutlined } from '@ant-design/icons';
 import HeaderComponent from '../component/HeaderComponent';
 import Axios from 'axios';
+import _ from "lodash";
 
 const { Meta } = Card;
 const { Search } = Input;
 export class NewsPage extends Component {
     state = {
-        persons: []
+        persons: [],
+        dataToShow: [],
+        search: ''
     }
 
     componentDidMount() {
@@ -23,6 +26,45 @@ export class NewsPage extends Component {
                 const persons = res.data;
                 this.setState({ persons });
             })
+    }
+
+    handleChange = (e) => {
+        e.preventDefault()
+        this.setState({
+            search: e.target.value
+        })
+    }
+
+    renderData() {
+        const toDos = _.map(this.state.persons, (values, key) => {
+            if (this.state.search) {
+                if (values.judul.toLowerCase().search(this.state.search) > -1)
+                    return <Col key={key} md={8}>
+                        <Card
+                            hoverable
+                            style={{ width: "90%", padding: "30px", margin: "10px auto", borderRadius: "20px" }}
+                            cover={<img alt="Kandang Unggas Otomatis" src={"http://cms.avesbox.com/assets/" + values.gambar} />}
+                        >
+                            <Meta title={values.judul} description={values.deskripsi} />
+                        </Card>
+                    </Col>
+            }
+            else {
+                return <Col key={key} md={8}>
+                    <Card
+                        hoverable
+                        style={{ width: "90%", padding: "30px", margin: "10px auto", borderRadius: "20px" }}
+                        cover={<img alt="Kandang Unggas Otomatis" src={"http://cms.avesbox.com/assets/" + values.gambar} />}
+                    >
+                        <Meta title={values.judul} description={values.deskripsi} />
+                    </Card>
+                </Col>
+            }
+        }
+        )
+        if (!_.isEmpty(toDos)) {
+            return toDos;
+        }
     }
 
     render() {
@@ -45,6 +87,7 @@ export class NewsPage extends Component {
                                             enterButton
                                             size="large"
                                             style={{ marginTop: "20px" }}
+                                            onChange={this.handleChange}
                                         />
                                     </div>
                                 </Col>
@@ -75,26 +118,16 @@ export class NewsPage extends Component {
                 </div >
                 <div className="layout-footer" style={{ paddingTop: "50px", paddingBottom: "50px" }}>
                     <Row>
-                        {this.state.persons.map(news => 
-                        <Col md={8}>
-                            <Card
-                                hoverable
-                                style={{ width: "90%", padding: "30px", margin: "10px auto", borderRadius: "20px" }}
-                                cover={<img alt="Kandang Unggas Otomatis" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />}
-                                >
-                                <Meta title={news.judul} description={news.deskripsi} />
-                            </Card>
-                        </Col>
-                        )}
+                        {this.renderData()}
                     </Row>
-                    <div className="pagination">
+                    {/* <div className="pagination">
                         <button className="btn-pagination"><LeftOutlined /></button>
                         <button className="btn-pagination active">1</button>
                         <button className="btn-pagination">2</button>
                         <button className="btn-pagination">3</button>
                         <button className="btn-pagination">4</button>
                         <button className="btn-pagination"><RightOutlined /></button>
-                    </div>
+                    </div> */}
                 </div>
                 <Footer />
             </div>
